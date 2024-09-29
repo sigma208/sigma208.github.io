@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Смотрите видео на Vitube">
+    <title>Видео - Vitube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vitube</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+        </nav>
+    </header>
+    <main>
+        <div class="video-container">
+            <video id="video-player" width="560" height="315" controls>
+                <source src="videos/video1.mp4">
+                Ваш браузер не поддерживает элемент video.
+            </video>
+            <h2 id="video-title">Название видео</h2>
+            <p id="video-description">Описание видео</p>
+            <div class="video-info">
+                <p>"первый видосик"</p>
+                <div>
+                    <h3>Название канала</h3>
+                    <button aria-label="Подписаться на канал">Подписаться</button>
+                </div>
+            </div>
+            <div class="video-actions">
+                <button aria-label="Мне нравится">Нравится</button>
+                <button aria-label="Мне не нравится">Не нравится</button>
+            </div>
+            <div class="comments">
+                <h3>Комментарии</h3>
+                <ul id="comment-list">
+                    <!-- Comments will be dynamically added here -->
+                </ul>
+                <form id="comment-form">
+                    <input type="text" id="comment-input" placeholder="Добавить комментарий..." required>
+                    <button type="submit" aria-label="Отправить комментарий">Комментировать</button>
+                </form>
+            </div>
+        </div>
+        <aside class="recommendations">
+            <h3>Далее</h3>
+            <ul id="recommendation-list">
+                <!-- Recommendations will be dynamically added here -->
+            </ul>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

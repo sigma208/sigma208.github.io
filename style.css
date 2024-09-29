@@ -1,0 +1,175 @@
+/* Общие стили */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Стили для списка видео на главной странице */
+#video-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#video-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    flex: 1 1 calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+
+#video-list li:hover {
+    background-color: #f1f1f1;
+}
+
+#video-list a {
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#video-list a:hover {
+    text-decoration: underline;
+}
+
+#video-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Стили для страницы видео */
+#video-player {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+#video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#video-description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#comment-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#comment-form {
+    margin-top: 20px;
+}
+
+#comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#recommendation-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recommendation-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#recommendation-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#recommendation-list a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для формы загрузки видео */
+#upload-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#upload-form input[type="text"],
+#upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#upload-form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+#upload-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#upload-form button:hover {
+    background-color: #0056b3;
+}
