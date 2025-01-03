@@ -1,24 +1,196 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitube</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЦКБ — Центральный Кошачий Банк</title>
+  <style>
+    /* Общие стили */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffcc99;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #663300;
+    }
+    nav {
+      background-color: #663300;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: #663300;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+
+    /* Стили для услуг */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .service {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 30%;
+      text-align: center;
+    }
+    .service img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    /* Стили для фото кота */
+    .cat-photo {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    /* Стили для формы */
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input, .form-group textarea, .form-group button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-group button {
+      background-color: #663300;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .form-group button:hover {
+      background-color: #552200;
+    }
+    .form-group input[type="file"] {
+      padding: 10px;
+      background-color: #fff;
+      border: 2px dashed #663300;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input[type="file"]:hover {
+      border-color: #552200;
+    }
+    .form-group input[type="file"]::file-selector-button {
+      background-color: #663300;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-group input[type="file"]::file-selector-button:hover {
+      background-color: #552200;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Vitube</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Видео</h2>
-        <ul id="video-list">
-            <!-- Videos will be dynamically added here -->
-        </ul>
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <h1>ЦКБ — Центральный Кошачий Банк</h1>
+    <p>Ваши хвосты в надёжных лапах!</p>
+    <img src="https://bumper-stickers.ru/38038-thickbox_default/koshka.jpg" alt="Котик ЦКБ" class="cat-photo">
+  </header>
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#services">Услуги</a>
+    <a href="#open-account">Открыть счёт</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <section id="about">
+    <h2>О нас</h2>
+    <p>ЦКБ — это Центральный Кошачий Банк, созданный специально для котиков и их владельцев. Мы предлагаем уникальные финансовые услуги, которые делают жизнь котиков и их хозяев ещё комфортнее. Наша валюта — Мур, которая закреплена за 1 пакетик корма.</p>
+  </section>
+  <section id="services">
+    <h2>Наши услуги</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://avatars.mds.yandex.net/i?id=c6668cda975bbda0cb1036fd94c2d005d91ae52a-4120598-images-thumbs&n=13" alt="Мурпроцент">
+        <h3>Мурпроцент</h3>
+        <p>Вкладывайте Муры и получайте проценты за мурлыканье вашего кота!</p>
+      </div>
+      <div class="service">
+        <img src="https://avatars.mds.yandex.net/i?id=06c67811c6c3ae0a83c8a6d7e66b567e146b015a-7051656-images-thumbs&n=13" alt="Кредиты">
+        <h3>Кредиты для котиков</h3>
+        <p>Когтедралки, домики и игрушки в рассрочку!</p>
+      </div>
+      <div class="service">
+        <img src="https://via.placeholder.com/100" alt="Мордочки котов">
+        <h3>Мордочки котов</h3>
+        <p>Уникальные мордочки котов вместо пластиковых карт. Удобно и мило!</p>
+      </div>
+    </div>
+  </section>
+  <section id="open-account">
+    <h2>Открыть счёт</h2>
+    <form action="/open-account" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="cat-name">Имя вашего кота:</label>
+        <input type="text" id="cat-name" name="cat-name" required>
+      </div>
+      <div class="form-group">
+        <label for="cat-photo">Фото вашего кота:</label>
+        <input type="file" id="cat-photo" name="cat-photo" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </section>
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <p>Адрес: ул. Кошачья, 9</p>
+    <p>Телефон: +7 (800) 123-45-67</p>
+    <p>Email: info@ckb.ru</p>
+  </section>
+  <footer>
+    <p>&copy; 2023 ЦКБ — Центральный Кошачий Банк</p>
+  </footer>
 </body>
 </html>
