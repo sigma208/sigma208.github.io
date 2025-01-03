@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ЦКБ — Центральный Кошачий Банк</title>
   <style>
-    /* Общие стили */
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f9f9f9;
@@ -49,8 +48,6 @@
       padding: 10px;
       width: 100%;
     }
-
-    /* Стили для услуг */
     .services {
       display: flex;
       justify-content: space-around;
@@ -70,8 +67,6 @@
       height: 100px;
       border-radius: 10px;
     }
-
-    /* Стили для фото кота */
     .cat-photo {
       width: 200px;
       height: auto;
@@ -79,8 +74,6 @@
       margin: 20px auto;
       display: block;
     }
-
-    /* Стили для формы */
     .form-group {
       margin-bottom: 15px;
     }
@@ -89,7 +82,7 @@
       margin-bottom: 5px;
       font-weight: bold;
     }
-    .form-group input, .form-group textarea, .form-group button {
+    .form-group input, .form-group button {
       width: 100%;
       padding: 10px;
       border: 1px solid #ddd;
@@ -104,29 +97,6 @@
       transition: background-color 0.3s ease;
     }
     .form-group button:hover {
-      background-color: #552200;
-    }
-    .form-group input[type="file"] {
-      padding: 10px;
-      background-color: #fff;
-      border: 2px dashed #663300;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: border-color 0.3s ease;
-    }
-    .form-group input[type="file"]:hover {
-      border-color: #552200;
-    }
-    .form-group input[type="file"]::file-selector-button {
-      background-color: #663300;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .form-group input[type="file"]::file-selector-button:hover {
       background-color: #552200;
     }
   </style>
@@ -169,14 +139,10 @@
   </section>
   <section id="open-account">
     <h2>Открыть счёт</h2>
-    <form action="/open-account" method="POST" enctype="multipart/form-data">
+    <form action="https://formspree.io/f/xbllpgvy" method="POST">
       <div class="form-group">
         <label for="cat-name">Имя вашего кота:</label>
         <input type="text" id="cat-name" name="cat-name" required>
-      </div>
-      <div class="form-group">
-        <label for="cat-photo">Фото вашего кота:</label>
-        <input type="file" id="cat-photo" name="cat-photo" accept="image/*" required>
       </div>
       <div class="form-group">
         <button type="submit">Отправить заявку</button>
